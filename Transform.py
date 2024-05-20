@@ -1,5 +1,7 @@
 import pandas as pd
 from datetime import datetime
+import pycountry
+from Utility import EU_COUNTRY_CODES
 
 #  Convert a column in DataFrame to datetime format, coercing errors
 
@@ -12,7 +14,7 @@ def process_dates(df, date_column):
 def calculate_age(df, date_column):
     current_year = datetime.now().year 
     df["age"] = current_year - df[date_column].dt.year
-    return df
+    return df 
 
 # Filter a DataFrame based on a query string
 
